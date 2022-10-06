@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <!-- Cabezera con inizializaciones -->
+<head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" type= "text/css" href="css/bootstrap.min.css">
+    <script type = "text/javacript" src = "js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="plugins/sweetalert2.min.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+</head>
+<body>
+    <!-- Inizializando los diferentes plugins -->
+    <script src="plugins/sweetalert2.all.min.js"></script>
+    <script src="popper/popper.min.js"></script>
+    <script src="jquery/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="sweet.js"></script>
+
+    <!-- Formularion para ingresar al home_0.php -->
+    <section class="form-login">
+        <h5>LOGIN</h5>
+        <form action="validate.php" method="POST"> <!-- Valida con la base de datos -->
+            <input class="controls" type="text" name="username" placeholder="Usuario" required>
+            <input class="controls" type="password" name="password"  placeholder="Contraseña" required>
+            <button type="submit" type="submit" class="buttons"> Ingresar</button>
+        </form>
+        <p><button> ¿Olvidastes tu Contraseña? </button></p>
+    </section>
+</body>
+
+</html>
