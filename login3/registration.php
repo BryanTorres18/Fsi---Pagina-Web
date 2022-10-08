@@ -49,14 +49,62 @@
     </div>
 </div>
     <!-- Registar un usuario -->
-    <form action= "register.php" method="POST">
-        <input type="text" placeholder="Nombre" name="firstname" required>
-        <input type="text" placeholder="Segundo nombre" name="middlename" required>
-        <input type="text" placeholder="Apellido" name="lastname" required>
-        <input type="date" name="birthdate" required>
-        <input type="text" placeholder="Usuario" name="username" required>
-        <input type="password" placeholder="Contraseña" name="password" required>
-        <button type= "subtmit">Registrar</button>
-    </form>
+    <div style="height: 30px;"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+            <div class="card shadow-lg p-3 mb-5 bg-white ">
+        <div class="card-header"> Registro </div>
+        <div class="card-body">
+        <form id="form1" form action= "register.php" method="POST" class="needs-validation" novalidate>
+                  <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                      <label for="nombre">Nombre</label>
+                      <input placeholder="Nombre" name="firstname" type="text" class="form-control" id="nombre" required>
+                      <div class="invalid-feedback"> Complete el campo.</div>    
+                    </div>
+                    <div class="col-md-4 mb-3">
+                      <label for="apellido">Segundo Nombre</label>
+                      <input type="text" placeholder="Segundo nombre" name="middlename" class="form-control" id="apellido" required>
+                      <div class="invalid-feedback"> Complete el campo.</div>   
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                      <label for="apellido">Apellido</label>
+                      <input type="text" placeholder="Apellido" name="lastname" class="form-control" id="apellido" required>
+                      <div class="invalid-feedback"> Complete el campo.</div>   
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                      <label for="apellido">Fecha de Nacimiento</label>
+                      <input type="date" name="birthdate" class="form-control" required>
+                      <div class="invalid-feedback"> Complete el campo.</div>   
+                    </div>
+                  </div>
+                    <div class="col-md-4 mb-3">
+                      <label for="usuario">Usuario</label>
+                      <div class="input-group">
+                        <input input type="text" placeholder="Usuario" name="username" class="form-control" required>
+                      <div class="invalid-feedback">Complete el campo.</div>   
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                      <label for="usuario">Contraseña</label>
+                      <div class="input-group">
+                        <input type="password" placeholder="Contraseña" name="password"class="form-control" required>
+                      <div class="invalid-feedback">Complete el campo.</div>   
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Boton donde se envia la informacion -->
+                  <button class="btn btn-primary" type="submit">Enviar</button>
+                </form>
+        </div>   
+    </div>
+            </div>       
+        </div>                  
+    </div>
 </body>
 </html>

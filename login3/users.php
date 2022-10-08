@@ -67,24 +67,27 @@
     </div>
 </div>
     <!-- Editar un usuario -->
-    <div class = "container">
-    <form action = "" method = "POST">
-      <input type = "text" placeholder = "Busqueda de usuario" name = "valueToSearch">
-      <button type = "submit" class = "signupbtn" name = "Search"> Buscar </button>
-            </form>
-            <br />
-            <?php
-            echo "<table border = '1'>
-            <tr>
-            <th>Nombre</th>
-            <th>Apellido</th>
-            <th>Segundo Apellido</th>
-            <th>Fecha Nacimiento</th>
-            <th>Actualizar</th>
-            <th>Eliminar</th>
-            </tr>";
-
-            while($row = mysqli_fetch_array($result))
+    <div class="container">
+      <!-- Inicio de boton de busqueda - Base -->
+      <form action = "" method = "POST">
+        <input type = "text" placeholder = "Busqueda de usuario" name = "valueToSearch">
+        <button type = "submit" class = "signupbtn" name = "Search"> Buscar </button>
+              </form> <!-- Fin de boton de busqueda - Base -->
+              <br />
+       <div class="row">
+           <div class="col-lg-12">
+            <table id="tablaUsuarios" class="table-striped table-bordered" style="width:100%">
+                <thead class="text-center">
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Segundo Apellido</th>
+                    <th>Fecha Nacimiento</th>
+                    <th>Actualizar</th>
+                    <th>Eliminar</th>
+                </thead>
+                <tbody>
+                <?php
+                while($row = mysqli_fetch_array($result))
             {
                 echo "<tr>";
                 echo "<td>" . $row['firstname'] . "</td>";
@@ -95,7 +98,11 @@
                 echo "<td><a href = 'delete.php?id=".$row['username']."'>Eliminar</a></td>";
                 echo "</tr>";
             }
-            echo "</table>";
             ?>
+          </tbody>
+            </table>
+           </div>
+       </div> 
+    </div>
 </body>
 </html>

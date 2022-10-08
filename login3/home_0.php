@@ -46,8 +46,8 @@
       <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
         <!-- Diferentes botones para las bases de datos -->
         <a type="button" class="btn btn-primary btn-lg px-4 gap-3" href="home.php">USUARIO</a>
-        <a type="button" class="btn btn-primary btn-lg px-4 gap-3" href="#">CLIENTE</a>
-        <a type="button" class="btn btn-primary btn-lg px-4 gap-3" href="#">SERVICIO</a>
+        <a type="button" class="btn btn-primary btn-lg px-4 gap-3" href="Clientes/home.php">CLIENTE</a>
+        <a type="button" class="btn btn-primary btn-lg px-4 gap-3" href="Servicios/home.php">SERVICIO</a>
       </div>
     </div>
 </div>
