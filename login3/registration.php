@@ -99,7 +99,7 @@
                     </div>
                   </div>
                   <!-- Boton donde se envia la informacion -->
-                  <button class="btn btn-primary" type="submit">Enviar</button>
+                  <button class="btn btn-primary" type="submit">Registrar</button>
                 </form>
         </div>   
     </div>

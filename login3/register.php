@@ -9,7 +9,7 @@
     $username=$_POST['username'];
     $password=$_POST['password'];
 
-    $sql = "INSERT INTO users(firstname, middlename, lastname, birthday, username, password) VALUES ('$firstname', '$middlename', '$lastname', '$birthday', 
+    $sql = "INSERT INTO users(firstname, middlename, lastname, birthday, username, password) VALUES ('$firstname', '$middlename', '$lastname', '$birthdate', 
     '$username', '$password')";
 
     if(mysqli_query($mysqli, $sql))
