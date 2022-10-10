@@ -10,7 +10,7 @@
     $username=$_POST['username'];
     $password=$_POST['password'];
 
-    $sql = "UPDATE SET firstname = '$firstname', middlename = '$middlename', lastname = '$lastname' , birthday = '$birthday', username = '$username', password = '$password'
+    $sql = "UPDATE users SET firstname = '$firstname', middlename = '$middlename', lastname = '$lastname' , birthday = '$birthday', username = '$username', password = '$password'
     WHERE username = '$id'";
 
     if(mysqli_query($mysqli, $sql))

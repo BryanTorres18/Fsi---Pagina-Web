@@ -7,7 +7,7 @@
     $firstname=$_POST['firstname'];
     $cost=$_POST['cost'];
 
-    $sql = "UPDATE SET id = '$id_', firstname = '$firstname', cost = '$cost',
+    $sql = "UPDATE servicios SET id = '$id_', firstname = '$firstname', cost = '$cost'
     WHERE firstname = '$id'";
 
     if(mysqli_query($mysqli, $sql))

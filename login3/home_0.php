@@ -48,6 +48,7 @@
         <a type="button" class="btn btn-primary btn-lg px-4 gap-3" href="home.php">USUARIO</a>
         <a type="button" class="btn btn-primary btn-lg px-4 gap-3" href="Clientes/home.php">CLIENTE</a>
         <a type="button" class="btn btn-primary btn-lg px-4 gap-3" href="Servicios/home.php">SERVICIO</a>
+        <a type="button" class="btn btn-primary btn-lg px-4 gap-3" href="servicioCliente/home.php">SERVICIOCLIENTE</a>
       </div>
     </div>
 </div>

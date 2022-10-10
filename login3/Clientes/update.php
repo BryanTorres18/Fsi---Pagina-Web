@@ -9,7 +9,7 @@
     $direction=$_POST['direction'];
     $email=$_POST['email'];
 
-    $sql = "UPDATE SET id = '$id_', firstname = '$firstname', phone = '$phone', direction = '$direction' , email = '$email',
+    $sql = "UPDATE clientes SET id = '$id_', firstname = '$firstname', phone = '$phone', direction = '$direction' , email = '$email'
     WHERE firstname = '$id'";
 
     if(mysqli_query($mysqli, $sql))
