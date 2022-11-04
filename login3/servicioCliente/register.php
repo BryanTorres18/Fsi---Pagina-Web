@@ -2,11 +2,11 @@
     include("config.php");
     include("session.php");
 
-    $id_usuario=$_POST['id_usuario'];
+    $ID_SERVICIO=$_POST['ID_SERVICIO'];
     $id_cliente=$_POST['id_cliente'];
-    $monto=$_POST['monto'];
+    $FECHA_ENTREGA=$_POST['FECHA_ENTREGA'];
 
-    $sql = "INSERT INTO serviciocliente(ID_USUARIO, ID_CLIENTE, MONTO) VALUES  ('$id_usuario', '$id_cliente', '$monto')";
+    $sql = "INSERT INTO serviciocliente(ID_SERVICIO, ID_CLIENTE, FECHA_ENTREGA) VALUES  ('$ID_SERVICIO', '$id_cliente', '$FECHA_ENTREGA')";
 
     if(mysqli_query($mysqli, $sql))
     {

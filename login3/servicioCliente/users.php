@@ -79,9 +79,9 @@
             <table id="tablaUsuarios" class="table-striped table-bordered" style="width:100%">
                 <thead class="text-center">
                     <th>ID Servicio-Cliente</th>
-                    <th>ID Usuario</th>
+                    <th>ID Servicio</th>
                     <th>ID Cliente</th>
-                    <th>Monto</th>
+                    <th>Fecha de Entrega</th>
                     <th>Fecha Hora</th>
                     <th>Actualizar</th>
                     <th>Eliminar</th>
@@ -92,9 +92,9 @@
             {
                 echo "<tr>";
                 echo "<td>" . $row['ID_SERVICIOCLIENTE'] . "</td>";
-                echo "<td>" . $row['ID_USUARIO'] . "</td>";
+                echo "<td>" . $row['ID_SERVICIO'] . "</td>";
                 echo "<td>" . $row['ID_CLIENTE'] . "</td>";
-                echo "<td>" . $row['MONTO'] . "</td>";
+                echo "<td>" . $row['FECHA_ENTREGA'] . "</td>";
                 echo "<td>" . $row['FECHA_HORA'] . "</td>";
                 echo "<td><a href = 'edit.php?id_=".$row['ID_SERVICIOCLIENTE']."'>Editar</a></td>";
                 echo "<td><a href = 'delete.php?id_=".$row['ID_SERVICIOCLIENTE']."'>Eliminar</a></td>";

@@ -2,10 +2,10 @@
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 10-10-2022 a las 04:37:26
+-- Servidor: 127.0.0.1:3306
+-- Tiempo de generación: 04-11-2022 a las 01:19:07
 -- Versión del servidor: 10.4.24-MariaDB
--- Versión de PHP: 7.4.29
+-- Versión de PHP: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,24 +24,24 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `clientes`
+-- Estructura de tabla para la tabla `estudiantes`
 --
 
-CREATE TABLE `clientes` (
-  `id` int(200) NOT NULL,
+CREATE TABLE `estudiantes` (
+  `id` int(8) UNSIGNED NOT NULL,
   `firstname` varchar(200) NOT NULL,
-  `phone` int(11) NOT NULL,
+  `last_name` varchar(200) NOT NULL,
+  `phone` int(9) NOT NULL,
   `direction` varchar(200) NOT NULL,
   `email` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `clientes`
+-- Volcado de datos para la tabla `estudiantes`
 --
 
-INSERT INTO `clientes` (`id`, `firstname`, `phone`, `direction`, `email`) VALUES
-(73327472, 'Mario', 988548577, 'Av. Los Alamos 957', 'mario12344@gmail.com'),
-(2147483647, 'wwe', 3112321, 'dasdsa', 'qdsasd@das.com');
+INSERT INTO `estudiantes` (`id`, `firstname`, `last_name`, `phone`, `direction`, `email`) VALUES
+(73327472, 'Bryan', 'Torres', 932618981, 'AV Ejercito', 'aaa@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -50,10 +50,10 @@ INSERT INTO `clientes` (`id`, `firstname`, `phone`, `direction`, `email`) VALUES
 --
 
 CREATE TABLE `serviciocliente` (
-  `ID_SERVICIOCLIENTE` int(11) NOT NULL,
-  `ID_USUARIO` int(11) NOT NULL,
-  `ID_CLIENTE` int(11) NOT NULL,
-  `MONTO` double NOT NULL,
+  `ID_SERVICIOCLIENTE` int(11) UNSIGNED NOT NULL,
+  `ID_SERVICIO` int(11) UNSIGNED NOT NULL,
+  `ID_CLIENTE` int(11) UNSIGNED NOT NULL,
+  `FECHA_ENTREGA` date NOT NULL,
   `FECHA_HORA` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -61,9 +61,9 @@ CREATE TABLE `serviciocliente` (
 -- Volcado de datos para la tabla `serviciocliente`
 --
 
-INSERT INTO `serviciocliente` (`ID_SERVICIOCLIENTE`, `ID_USUARIO`, `ID_CLIENTE`, `MONTO`, `FECHA_HORA`) VALUES
-(8, 1, 1, 100, '2022-10-10 01:52:14'),
-(9, 1, 2, 1200, '2022-10-10 02:02:05');
+INSERT INTO `serviciocliente` (`ID_SERVICIOCLIENTE`, `ID_SERVICIO`, `ID_CLIENTE`, `FECHA_ENTREGA`, `FECHA_HORA`) VALUES
+(13, 132932199, 73327472, '2022-11-23', '2022-11-03 23:27:05'),
+(16, 132932199, 73327472, '2022-11-28', '2022-11-04 00:16:18');
 
 -- --------------------------------------------------------
 
@@ -72,7 +72,7 @@ INSERT INTO `serviciocliente` (`ID_SERVICIOCLIENTE`, `ID_USUARIO`, `ID_CLIENTE`,
 --
 
 CREATE TABLE `servicios` (
-  `id` int(200) NOT NULL,
+  `id` int(11) UNSIGNED NOT NULL,
   `firstname` varchar(200) NOT NULL,
   `cost` int(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -113,16 +113,18 @@ INSERT INTO `users` (`id`, `firstname`, `middlename`, `lastname`, `birthday`, `u
 --
 
 --
--- Indices de la tabla `clientes`
+-- Indices de la tabla `estudiantes`
 --
-ALTER TABLE `clientes`
+ALTER TABLE `estudiantes`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `serviciocliente`
 --
 ALTER TABLE `serviciocliente`
-  ADD PRIMARY KEY (`ID_SERVICIOCLIENTE`);
+  ADD PRIMARY KEY (`ID_SERVICIOCLIENTE`),
+  ADD KEY `ID_SERVICIO` (`ID_SERVICIO`),
+  ADD KEY `ID_CLIENTE` (`ID_CLIENTE`);
 
 --
 -- Indices de la tabla `servicios`
@@ -144,13 +146,24 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `serviciocliente`
 --
 ALTER TABLE `serviciocliente`
-  MODIFY `ID_SERVICIOCLIENTE` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `ID_SERVICIOCLIENTE` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `serviciocliente`
+--
+ALTER TABLE `serviciocliente`
+  ADD CONSTRAINT `clientes_id_serviciocliente` FOREIGN KEY (`ID_CLIENTE`) REFERENCES `estudiantes` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `servicios_id_serviciocliente` FOREIGN KEY (`ID_SERVICIO`) REFERENCES `servicios` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

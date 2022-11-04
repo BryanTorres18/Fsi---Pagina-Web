@@ -34,7 +34,7 @@
       <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
         <li><a href="../home_0.php" class="nav-link px-2 link-secondary">Inicio</a></li>
         <li><a href="registration.php" class="nav-link px-2 link-secondary">Registrar</a></li>
-        <li><a href="users.php" class="nav-link px-2 link-secondary">ServicoCliente</a></li>
+        <li><a href="users.php" class="nav-link px-2 link-secondary">ServicioCliente</a></li>
         <li><a href="../login.html" class="nav-link px-2 link-dark">Salir</a></li>
       </ul>
         <!-- Botones sin funcionamiento -->
@@ -58,9 +58,9 @@
         {
             echo"<input type = 'hidden' name ='id_' value='{$row['ID_SERVICIOCLIENTE']}' required>";
             echo"<input type = 'number' name='ID_SERVICIOCLIENTE' value='{$row['ID_SERVICIOCLIENTE']}' required>";
-            echo"<input type = 'number' name='ID_USUARIO' value='{$row['ID_USUARIO']}' required>";
+            echo"<input type = 'number' name='ID_SERVICIO' value='{$row['ID_SERVICIO']}' required>";
             echo"<input type = 'number' name='ID_CLIENTE' value='{$row['ID_CLIENTE']}' required>";
-            echo"<input type = 'number' name='MONTO' value='{$row['MONTO']}' required>";
+            echo"<input type = 'date' name='FECHA_ENTREGA' value='{$row['FECHA_ENTREGA']}' required>";
             echo"<label> Fecha/Hora</label>";
             echo"<input type = 'timestamp' name='FECHA_HORA' value='{$row['FECHA_HORA']}' required>";
             echo "<button type='submit'>Actualizar</button>";

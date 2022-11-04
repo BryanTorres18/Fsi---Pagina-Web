@@ -59,7 +59,7 @@
             echo"<input type = 'hidden' name ='id_' value='{$row['firstname']}' required>";
             echo"<input type = 'number' name='id' value='{$row['id']}' required>";
             echo"<input type = 'text' name='firstname' value='{$row['firstname']}' required>";
-            echo"<input type = 'number' name='phone' value='{$row['cost']}' required>";
+            echo"<input type = 'number' name='cost' value='{$row['cost']}' required>";
             echo "<button type='submit'>Actualizar</button>";
         }
         ?>

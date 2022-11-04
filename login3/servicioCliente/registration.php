@@ -59,18 +59,18 @@
         <form id="form1" form action= "register.php" method="POST" class="needs-validation" novalidate>
                   <div class="form-row">
                     <div class="col-md-4 mb-3">
-                      <label for="ID Usuario">ID Usuario</label>
-                      <input placeholder="ID Usuario" name="id_usuario" type="text" class="form-control" id="id_usuario" required>
+                      <label for="ID Usuario">ID Servicio</label>
+                      <input placeholder="ID SERVICIO" name="ID_SERVICIO" type="text" class="form-control" id="ID_SERVICIO" required>
                       <div class="invalid-feedback"> Complete el campo.</div>    
                     </div>
                     <div class="col-md-4 mb-3">
                       <label for="ID Cliente">ID Cliente</label>
-                      <input type="text" placeholder="ID Cliente" name="id_cliente" class="form-control" id="id_cliente" required>
+                      <input  placeholder="ID Cliente" name="id_cliente" id="id_cliente" class="form-control" type="text" required>
                       <div class="invalid-feedback"> Complete el campo.</div>   
                     </div>
                     <div class="col-md-4 mb-3">
-                      <label for="Monto">Monto</label>
-                      <input type="text" placeholder="Monto" name="monto" class="form-control" id="monto" required>
+                      <label for="FECHA_ENTREGA">Fecha de Entrega</label>
+                      <input type="date" placeholder="FECHA de ENTREGA" name="FECHA_ENTREGA" class="form-control" id="FECHA_ENTREGA" required>
                       <div class="invalid-feedback"> Complete el campo.</div>   
                     </div>
                   </div>
