@@ -7,7 +7,8 @@
 
 body 
 {
-    background-image: url("Imagenes/fondo3.jpg");
+    /*background-image: url("Imagenes/verde.jpg");*/ 
+    background-color: black;
     background-image: no-repeat;
     background-image: fixed;
     background-image: center;
@@ -19,7 +20,8 @@ body
 
 header
 {
-    background-color: rgb(78, 74, 74);
+    background-color: rgb(255, 255, 255);
+    width: 100%;
 }
 
 .cuadrado {
@@ -28,10 +30,15 @@ header
     height:0;
     padding-top:25%;
     position:relative;
-    background:rgb(230, 224, 224);
+    background:rgb(255, 255, 255);
 }
 
 table.dataTable thead {
-    background: linear-gradient(to right, #1b7fe3, #191d5c);
-    color:white;
+    background: linear-gradient(to right, #047ef8, #191d5c);
+    color:rgb(6, 176, 34);
+}
+
+.btn-personal {
+    background-color: aqua;
+    color: blue;
 }

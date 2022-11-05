@@ -7,7 +7,8 @@
 
 body 
 {
-    background-image: url("Imagenes/fondo3.jpg");
+    /*background-image: url("Imagenes/fondo_servicios.jpg");*/
+    background-color: white;
     background-image: no-repeat;
     background-image: fixed;
     background-image: center;
@@ -19,7 +20,7 @@ body
 
 header
 {
-    background-color: rgb(78, 74, 74);
+    background-color: rgb(255, 255, 255);
 }
 
 .cuadrado {
@@ -35,3 +36,5 @@ table.dataTable thead {
     background: linear-gradient(to right, #1b7fe3, #191d5c);
     color:white;
 }
+
+

@@ -2,10 +2,10 @@
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 04-11-2022 a las 01:19:07
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 05-11-2022 a las 00:25:56
 -- Versión del servidor: 10.4.24-MariaDB
--- Versión de PHP: 8.1.6
+-- Versión de PHP: 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -41,6 +41,7 @@ CREATE TABLE `estudiantes` (
 --
 
 INSERT INTO `estudiantes` (`id`, `firstname`, `last_name`, `phone`, `direction`, `email`) VALUES
+(11111111, 'Marcos', 'Calderon', 912919191, 'Calle Narnia SN', 'marco@hotmail.com'),
 (73327472, 'Bryan', 'Torres', 932618981, 'AV Ejercito', 'aaa@gmail.com');
 
 -- --------------------------------------------------------
@@ -82,6 +83,7 @@ CREATE TABLE `servicios` (
 --
 
 INSERT INTO `servicios` (`id`, `firstname`, `cost`) VALUES
+(1, 'Transporte', 100),
 (132932199, 'Limpieza', 700);
 
 -- --------------------------------------------------------

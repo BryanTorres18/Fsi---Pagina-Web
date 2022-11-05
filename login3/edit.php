@@ -28,7 +28,7 @@
 <div class="container">
     <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
       <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use img ="Imagenes/logo.jgp"></use></svg>
+        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use img ="Imagenes/logo-ucsm1.jpg"></use></svg>
       </a>
         <!-- Botones del encabezado -->
       <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
@@ -46,7 +46,7 @@
     <!-- Cuerpo con bootstrap -->
     </div>
     <div class="px-4 py-5 my-5 text-center">
-        <img class="d-block mx-auto mb-4" src="Imagenes/logo.jpg" alt="" width="72" height="57">
+        <img class="d-block mx-auto mb-4" src="Imagenes/logo-ucsm1.jpg" alt="" width="72" height="57">
         <h1 class="display-5 fw-bold">Actualizar Usuarios</h1>
     </div>
 </div>
